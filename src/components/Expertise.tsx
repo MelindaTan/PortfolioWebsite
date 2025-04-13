@@ -7,38 +7,21 @@ import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
     "React",
-    "TypeScript",
     "JavaScript",
-    "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
+    "HTML",
+    "CSS",
     "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+    "SQL"
 ];
 
 const labelsSecond = [
     "Git",
     "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+    "Pandas"
 ];
 
 const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+    "OpenAI"
 ];
 
 function Expertise() {
