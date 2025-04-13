@@ -28,6 +28,18 @@ function Timeline() {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            date="Jun 2024 - Aug 2024"
+            iconStyle={{ background: '#3a393b', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Marketing Operations Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">Beaverton, Oregon</h4>
+            <p>
+            Executed event marketing campaigns, managed outreach, and drove engagement through strategic coordination
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
             date="Jun 2022 - Aug 2022"
             iconStyle={{ background: '#3a393b', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}

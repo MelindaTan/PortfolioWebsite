@@ -2,14 +2,24 @@ footer {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
-
+  
     svg {
-        width: 1.1em !important;
-        height: 1.1em !important;
-        margin-right: 10px;
+      width: 1.1em !important;
+      height: 1.1em !important;
+      margin-right: 10px;
     }
-
+  
     p {
-        font-size: 0.8em;
+      font-size: 0.8em;
     }
-}
+  
+    a {
+      color: white; 
+      transition: color 0.3s ease;
+    }
+  
+    a:hover {
+      color: rgb(252, 192, 249); 
+    }
+  }
+  
