@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../assets/styles/Contact.scss';
 import emailjs from '@emailjs/browser';
 import { Box, Button, TextField } from '@mui/material';
@@ -16,6 +16,37 @@ const Contact: React.FC = () => {
     email: false,
     message: false,
   });
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("YOUR_PUBLIC_KEY");
+  }, []);
+
+  const inputStyles = {
+    backgroundColor: 'white',
+    '& .MuiInputBase-input': {
+      color: 'black',
+      backgroundColor: 'white',
+    },
+    '& .MuiInputLabel-root': {
+      color: 'black',
+    },
+    '& .MuiOutlinedInput-root': {
+      backgroundColor: 'white',
+      '& fieldset': {
+        borderColor: 'black',
+      },
+      '&:hover fieldset': {
+        borderColor: 'black',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'black',
+      }
+    },
+    '& .MuiFormHelperText-root': {
+      color: 'black',
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -37,25 +68,34 @@ const Contact: React.FC = () => {
     };
     setErrors(newErrors);
 
-    const hasError = Object.values(newErrors).some(error => error);
-    if (hasError) return;
+    if (name !== '' && email !== '' && message !== '') {
+      const templateParams = {
+        name: name,
+        email: email,
+        message: message
+      };
 
-    const templateParams = {
-      name,
-      email,
-      message,
-    };
-
-    emailjs.send('your_service_id', 'your_template_id', templateParams, 'your_public_key')
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch((error) => {
-        console.error('FAILED...', error);
-        alert('Failed to send message. Please try again.');
-      });
+      console.log('Sending email with params:', templateParams);
+      emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        templateParams
+      ).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+          setFormData({
+            name: '',
+            email: '',
+            message: ''
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error);
+          alert('Failed to send message. Please try again.');
+        },
+      );
+    }
   };
 
   return (
@@ -63,7 +103,7 @@ const Contact: React.FC = () => {
       <div className="items-container">
         <div className="contact_wrapper">
           <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
+          <p>Let's collaborate and make something great !</p>
           <Box
             component="form"
             onSubmit={sendEmail}
@@ -81,6 +121,7 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
                 error={errors.name}
                 helperText={errors.name ? "Please enter your name" : ""}
+                sx={inputStyles}
               />
               <TextField
                 required
@@ -91,6 +132,7 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
                 error={errors.email}
                 helperText={errors.email ? "Please enter your email or phone number" : ""}
+                sx={inputStyles}
               />
             </div>
             <TextField
@@ -105,6 +147,7 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               error={errors.message}
               helperText={errors.message ? "Please enter the message" : ""}
+              sx={inputStyles}
             />
             <Button
               type="submit"
