@@ -101,7 +101,7 @@ function Project() {
                     transition={{ duration: 0.5, delay: 0.5 }}
                 >
                     <HoverScale>
-                        <a href="http://www.linkedin.com/in/melintran" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/MelindaTan" target="_blank" rel="noreferrer">
                             <motion.img 
                                 src={project3} 
                                 className="zoom" 
@@ -135,7 +135,7 @@ function Project() {
                     transition={{ duration: 0.5, delay: 0.5 }}
                 >
                     <HoverScale>
-                        <a href="http://www.linkedin.com/in/melintran" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/MelindaTan" target="_blank" rel="noreferrer">
                             <motion.img 
                                 src={project4} 
                                 className="zoom" 
@@ -169,7 +169,7 @@ function Project() {
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
                     <HoverScale>
-                        <a href="http://www.linkedin.com/in/melintran" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/MelindaTan" target="_blank" rel="noreferrer">
                             <motion.img 
                                 src={project5} 
                                 className="zoom" 
