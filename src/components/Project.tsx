@@ -15,14 +15,14 @@ import '../assets/styles/Project.scss';
 function Project() {
     return (
         <div className="projects-container" id="projects">
-            <motion.h2
+            <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
                 Projects
-            </motion.h2>
+            </motion.h1>
             <div className="projects-grid">
 
                 <motion.div 
@@ -45,7 +45,6 @@ function Project() {
                         </a>
                         <motion.h2 
                             className="dark-title"
-                            whileHover={{ color: '#FFC0CB' }}
                         >
                             Plant Shop
                         </motion.h2>
@@ -80,7 +79,6 @@ function Project() {
                         </a>
                         <motion.h2 
                             className="dark-title"
-                            whileHover={{ color: '#FFC0CB' }}
                         >
                             BurgerBash
                         </motion.h2>
@@ -115,7 +113,6 @@ function Project() {
                         </a>
                         <motion.h2 
                             className="dark-title"
-                            whileHover={{ color: '#FFC0CB' }}
                         >
                             Pollution Prediction
                         </motion.h2>
@@ -150,7 +147,6 @@ function Project() {
                         </a>
                         <motion.h2 
                             className="dark-title"
-                            whileHover={{ color: '#FFC0CB' }}
                         >
                             Produce Prediction
                         </motion.h2>
@@ -185,7 +181,6 @@ function Project() {
                         </a>
                         <motion.h2 
                             className="dark-title"
-                            whileHover={{ color: '#FFC0CB' }}
                         >
                             Automated Car
                         </motion.h2>
@@ -220,7 +215,6 @@ function Project() {
                         </a>
                         <motion.h2 
                             className="dark-title"
-                            whileHover={{ color: '#FFC0CB' }}
                         >
                             FlameFreeze
                         </motion.h2>

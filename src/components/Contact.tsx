@@ -20,7 +20,11 @@ const Contact: React.FC = () => {
   });
 
   useEffect(() => {
-    // Initialize EmailJS with your public key
+    // TODO: Replace with your EmailJS public key
+    // 1. Sign up at https://www.emailjs.com
+    // 2. Create a new Email Service (e.g., Gmail)
+    // 3. Create an email template
+    // 4. Get your public key from Account > API Keys
     emailjs.init("YOUR_PUBLIC_KEY");
   }, []);
 
@@ -79,8 +83,8 @@ const Contact: React.FC = () => {
 
       console.log('Sending email with params:', templateParams);
       emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'YOUR_SERVICE_ID', // TODO: Replace with your EmailJS service ID from Email Services
+        'YOUR_TEMPLATE_ID', // TODO: Replace with your EmailJS template ID from Email Templates
         templateParams
       ).then(
         (response) => {
