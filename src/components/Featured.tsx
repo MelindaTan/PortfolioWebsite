@@ -77,7 +77,7 @@ function Featured() {
                                 </div>
                             </div>
                             <div className="project-info">
-                                <h3>{project.title}</h3>
+                                <h3 className={project.title === "Pollution Prediction" ? "no-transform" : ""}>{project.title}</h3>
                                 <p>{project.description}</p>
                                 <div className="tech-stack">
                                     {project.tech.map((tech, techIndex) => (

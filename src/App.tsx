@@ -9,6 +9,7 @@ import {
 } from "./components";
 import About from "./components/About";
 import Featured from "./components/Featured";
+import Project from "./components/Project";
 import FadeIn from './components/FadeIn';
 import './index.scss';
 
@@ -35,7 +36,7 @@ function App() {
                 <About/>
                 <Expertise/>
                 <Timeline/>
-                <Featured/>
+                <Project/>
                 <Contact/>
             </FadeIn>
             <Footer />

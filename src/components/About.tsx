@@ -25,7 +25,7 @@ function About() {
                     </div>
                     <div className="point">
                         <h3>Interests</h3>
-                        <p>Machine Learning</p>
+                        <p>Artificial Intelligence & Machine Learning</p>
                         <p>Robotics & Automation</p>
                         <p>Full Stack Development</p>
                     </div>

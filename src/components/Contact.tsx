@@ -3,6 +3,8 @@ import '../assets/styles/Contact.scss';
 import emailjs from '@emailjs/browser';
 import { Box, Button, TextField } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+import EmailIcon from '@mui/icons-material/Email';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -157,6 +159,16 @@ const Contact: React.FC = () => {
               Send
             </Button>
           </Box>
+          <div className="contact-info">
+            <div className="info-item">
+              <EmailIcon />
+              <a href="mailto:meltran@bu.edu">meltran@bu.edu</a>
+            </div>
+            <div className="info-item">
+              <LocationOnIcon />
+              <p>Boston, Massachusetts & Portland, Oregon</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

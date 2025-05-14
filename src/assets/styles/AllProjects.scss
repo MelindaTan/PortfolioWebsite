@@ -62,6 +62,7 @@
                 h2 {
                     margin: 0 0 1rem;
                     font-size: 1.8rem;
+                    text-transform: capitalize;
 
                     a {
                         color: var(--text-primary);
@@ -145,6 +146,33 @@
                         transform: translateX(5px);
                     }
                 }
+            }
+        }
+    }
+}
+
+// Light mode styles
+[data-theme='light'] .all-projects-page {
+    --card-bg: #ffffff;
+    --text-primary: #0d1116;
+    --text-secondary: #4a4a4a;
+    --tag-bg: #f0f0f0;
+    --tag-text: #0d1116;
+
+    .project-card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+        .project-content {
+            h2 a {
+                color: var(--text-primary);
+                
+                &:hover {
+                    color: #FFC0CB;
+                }
+            }
+            
+            .description {
+                color: var(--text-secondary);
             }
         }
     }

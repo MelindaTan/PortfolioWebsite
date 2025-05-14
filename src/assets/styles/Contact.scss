@@ -19,6 +19,59 @@
   }
 }
 
+.contact-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+    svg {
+      margin-right: 10px;
+      color: #FFC0CB;
+    }
+
+    a, p {
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+// Light mode styles
+.light-mode {
+  .contact-info {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    
+    .info-item {
+      a, p {
+        color: #0d1116;
+      }
+      
+      a:hover {
+        color: #FFC0CB;
+      }
+    }
+  }
+}
+
+// Dark mode styles
+.dark-mode {
+  .contact-info {
+    .info-item {
+      a, p {
+        color: white !important;
+      }
+      
+      a:hover {
+        color: #FFC0CB !important;
+      }
+    }
+  }
+}
+
 label {
   font-size: 1.2rem;
   font-family: 'DomaineDispNar-Medium', sans-serif;
