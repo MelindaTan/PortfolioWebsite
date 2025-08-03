@@ -16,7 +16,21 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="May 2025 - Present"
+            date="Sep 2025 - Present"
+            iconStyle={{ background: '#3a393b', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">LLM Undergraduate Researcher</h3>
+            <h4 className="vertical-timeline-element-subtitle">Boston, Massachusetts</h4>
+            <p>
+              Conducted research on large language models, fine-tuning techniques, and prompt engineering methodologies
+            </p>
+          </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="May 2025 - Aug 2025"
             iconStyle={{ background: '#3a393b', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >

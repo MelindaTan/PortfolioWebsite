@@ -1,3 +1,4 @@
+/*
 import React, { useState, useEffect } from 'react';
 import '../assets/styles/Contact.scss';
 import emailjs from '@emailjs/browser';
@@ -177,6 +178,14 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
+};
+
+export default Contact;
+*/
+
+// Contact component temporarily commented out
+const Contact: React.FC = () => {
+  return null;
 };
 
 export default Contact;
