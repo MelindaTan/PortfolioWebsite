@@ -12,6 +12,20 @@ function Timeline() {
       <div className="items-container">
         <h1>Career History</h1>
         <VerticalTimeline>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Sep 2025 - Present"
+            iconStyle={{ background: '#3a393b', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">ML & AI Software Engineer</h3>
+            <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+            <p>
+              Developed real-time data pipelines and enhanced ML models to support large-scale soil health analysis, integrating drone and public soil data into the OrpheusAI platform while streamlining AI workflows through technical documentation and collaboration
+            </p>
+          </VerticalTimelineElement>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
