@@ -10,6 +10,7 @@ function Footer() {
         <a href="https://github.com/MelindaTan" target="_blank" rel="noreferrer"><GitHubIcon/></a>
         <a href="https://www.linkedin.com/in/melintran" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
       </div>
+      <p>Developed by Melinda Tran</p>
     </footer>
   );
 }

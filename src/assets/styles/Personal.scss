@@ -1,0 +1,265 @@
+.personal-container {
+  padding: 5rem 1.5rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: rgb(39, 40, 34);
+}
+
+.main-container.dark-mode .personal-container {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.personal-content h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #FF69B4;
+}
+
+.hobby-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.hobby-item:nth-child(odd) {
+  direction: rtl;
+}
+
+.hobby-item:nth-child(odd) .hobby-text {
+  direction: ltr;
+}
+
+.hobby-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #FFB6C1;
+}
+
+.main-container.dark-mode .hobby-text h2 {
+  color: #FFB6C1;
+}
+
+.hobby-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgb(39, 40, 34);
+}
+
+.main-container.dark-mode .hobby-text p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.main-container.light-mode .hobby-text p {
+  color: rgb(39, 40, 34);
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 300px;
+  background: rgba(39, 40, 34, 0.1);
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(39, 40, 34, 0.6);
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-container.dark-mode .photo-placeholder {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.main-container.dark-mode .photo-placeholder {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.photo-placeholder:hover {
+  background: rgba(39, 40, 34, 0.15);
+  border-color: rgba(39, 40, 34, 0.5);
+}
+
+.main-container.dark-mode .photo-placeholder:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.travel-section {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.travel-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #FFB6C1;
+}
+
+.main-container.dark-mode .travel-section h2 {
+  color: #FFB6C1;
+}
+
+.travel-section > p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgb(39, 40, 34);
+  margin-bottom: 2rem;
+}
+
+.main-container.dark-mode .travel-section > p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.main-container.light-mode .travel-section > p {
+  color: rgb(39, 40, 34);
+}
+
+.travel-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.travel-photo-placeholder {
+  width: 100%;
+  height: 250px;
+  background: rgba(39, 40, 34, 0.1);
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(39, 40, 34, 0.6);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-container.dark-mode .travel-photo-placeholder {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.travel-photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.main-container.dark-mode .travel-photo-placeholder {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.travel-photo-placeholder:hover {
+  background: rgba(39, 40, 34, 0.15);
+  border-color: rgba(39, 40, 34, 0.5);
+}
+
+.main-container.dark-mode .travel-photo-placeholder:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid rgba(39, 40, 34, 0.6);
+  color: rgb(39, 40, 34);
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  background: rgba(39, 40, 34, 0.05);
+}
+
+.main-container.dark-mode .back-button {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.main-container.dark-mode .back-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hobby-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hobby-item:nth-child(odd) {
+    direction: ltr;
+  }
+
+  .personal-content h1 {
+    font-size: 2rem;
+  }
+
+  .hobby-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .photo-placeholder {
+    height: 250px;
+  }
+
+  .travel-photos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-photo-placeholder {
+    height: 200px;
+  }
+}
+
+.favorite-color-note {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.favorite-color-note p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #db7093;
+  margin: 0;
+  font-style: italic;
+}
+
+.main-container.dark-mode .favorite-color-note p {
+  color: #ffb6c1;
+}

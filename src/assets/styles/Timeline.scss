@@ -1,10 +1,14 @@
 .vertical-timeline span {
     color: white;
-    font-family: 'Courier Prime', monospace;
+    font-family: "Lato", sans-serif;
 }
 
 .vertical-timeline p {
     color: rgb(39, 40, 34);
+}
+
+.vertical-timeline-element {
+    cursor: pointer;
 }
 
 .vertical-timeline-element p {
@@ -13,14 +17,26 @@
 
 .vertical-timeline-element h3 {
     color: rgb(39, 40, 34);
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.vertical-timeline-element h3:hover {
+    color: #ff69b4;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+    color: #e05a8a;
+    font-size: 1.05em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-top: 4px;
 }
 
 .vertical-timeline-element span {
     color: rgb(39, 40, 34);
+    font-family: "Lato", sans-serif;
 }
 
 .vertical-timeline-element .vertical-timeline-element-date {

@@ -1,20 +1,22 @@
 import React from "react";
+import TypewriterGreeting from "./TypewriterGreeting";
 import '../assets/styles/About.scss';
 
 function About() {
     return (
         <div className="about-container" id="about">
             <div className="about-content">
-                <h1>About Me</h1>
+                <div className="eyebrow">ABOUT ME</div>
+                <h1><TypewriterGreeting greeting="A little about me :)" /></h1>
                 <div className="about-text">
                     <p>
-                    Hello! I'm Melinda, a Computer Engineering and Computer Science student with a concentration in ML. I'm passionate about leveraging AI and software to build intelligent, impactful solutions. With a strong foundation in algorithms, data structures, and machine learning, I enjoy creating systems that learn, adapt, and solve real-world problems.
+                    Hello! I'm Melinda, a Computer Engineering and Computer Science student with a concentration in machine learning. My journey began in mechanical design and grew into software design. Understanding how physical systems work sparked my interest in writing the software that brings them to life.
                     </p>
                     <p>
-                    My journey in technology has been fueled by a fascination with artificial intelligence and its potential to transform industries. From training neural networks to building intuitive software applications, I thrive on turning complex ideas into functional, user-focused tools.
+                    I'm especially excited about software and AI for robotics. I love working on computer vision: helping robots interpret what they see, understand their surroundings, and use that information to navigate and interact with the world. My mechanical background helps me connect software decisions to how a robot behaves in practice.
                     </p>
                     <p>
-                    I enjoy exploring new developments in AI, diving into open-source communities, and collaborating with others to turn ideas into meaningful software. I'm always looking for opportunities to learn, build, and grow through hands-on experience.
+                    I enjoy building the software behind intelligent robotic systems, from training perception models to integrating them with robot control systems. I want to keep exploring how computer vision and machine learning can make robots more capable and reliable, and I'm always eager to learn and collaborate with others working on these challenges.
                     </p>
                 </div>
                 <div className="key-points">
@@ -25,15 +27,15 @@ function About() {
                     </div>
                     <div className="point">
                         <h3>Interests</h3>
-                        <p>Artificial Intelligence & Machine Learning</p>
-                        <p>Robotics & Automation</p>
-                        <p>Full Stack Development</p>
+                        <p>Software & AI for Robotics</p>
+                        <p>Computer Vision & Robot Perception</p>
+                        <p>Machine Learning & Autonomous Systems</p>
                     </div>
                     <div className="point">
                         <h3>Goals</h3>
-                        <p>Creating Innovative Solutions</p>
-                        <p>Continuous Learning</p>
-                        <p>Technology for Impact</p>
+                        <p>Build Intelligent Robotics Software</p>
+                        <p>Turn Visual Perception into Robot Action</p>
+                        <p>Connect AI Models with Real-World Systems</p>
                     </div>
                 </div>
             </div>

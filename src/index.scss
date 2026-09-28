@@ -8,6 +8,25 @@ body {
   font-size: 1.1rem !important;
 }
 
+/* Neutral white scrollbar */
+html {
+  scrollbar-color: #fff #30363d;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #30363d;
+}
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
   font-size: 1rem !important;
@@ -17,6 +36,32 @@ code {
   position: relative;
   background-color: #0d1116;
 
+  section, > div:not(:first-child) {
+    border-top: none;
+  }
+}
+
+/* Elegant accent underline for all section h1 headings */
+.projects-container > h1,
+.skills-container > h1,
+.resume-container h1,
+.about-container h1,
+#work h1,
+#contact h1 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4em;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+    border-radius: 2px;
+  }
 }
 
 a {

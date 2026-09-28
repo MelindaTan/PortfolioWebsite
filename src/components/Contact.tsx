@@ -109,7 +109,8 @@ const Contact: React.FC = () => {
     <div id="contact">
       <div className="items-container">
         <div className="contact_wrapper">
-          <h1>Contact Me</h1>
+          <div className="eyebrow">CONTACT ME</div>
+          <h1><TypewriterGreeting greeting="Let’s build something together !" /></h1>
           <p>Let's collaborate and make something great !</p>
           <Box
             component="form"
@@ -183,9 +184,91 @@ const Contact: React.FC = () => {
 export default Contact;
 */
 
-// Contact component temporarily commented out
+import React, { useState } from 'react';
+import TypewriterGreeting from './TypewriterGreeting';
+import '../assets/styles/Contact.scss';
+import EmailIcon from '@mui/icons-material/Email';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 const Contact: React.FC = () => {
-  return null;
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      setError('Please fill out your name, email, and message.');
+      return;
+    }
+
+    setError('');
+
+    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+
+    window.location.href = `mailto:meltran@bu.edu?subject=${subject}&body=${body}`;
+  };
+
+  return (
+    <div id="contact">
+      <div className="items-container">
+        <div className="contact_wrapper">
+          <div className="eyebrow">CONTACT ME</div>
+          <h1><TypewriterGreeting greeting="Let’s build something together !" /></h1>
+          <p>Let's collaborate and make something great!</p>
+
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="contact-fields">
+              <input
+                type="text"
+                className="contact-input"
+                placeholder="Your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                className="contact-input"
+                placeholder="Your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+
+            <textarea
+              className="contact-textarea"
+              placeholder="Your message"
+              rows={7}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+
+            {error && <p className="form-error">{error}</p>}
+
+            <button type="submit" className="contact-submit">
+              Send Message
+            </button>
+          </form>
+
+          <div className="contact-info">
+            <div className="info-item">
+              <EmailIcon />
+              <a href="mailto:meltran@bu.edu">meltran@bu.edu</a>
+            </div>
+            <div className="info-item">
+              <LocationOnIcon />
+              <p>Boston, Massachusetts & Portland, Oregon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Contact;

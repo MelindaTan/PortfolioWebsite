@@ -1,0 +1,62 @@
+.resume-container {
+  padding: 5rem 1.5rem 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: rgb(39, 40, 34);
+}
+
+.main-container.dark-mode .resume-container {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.resume-container h1 {
+  margin-bottom: 1rem;
+}
+
+.resume-container p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.resume-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid #ffb6c1;
+  background: #fff0f5;
+  color: #db7093;
+  text-decoration: none;
+  font-weight: bold;
+  max-width: 250px;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.main-container.dark-mode .resume-button {
+  border-color: #ffb6c1;
+  background: #fff0f5;
+  color: #db7093;
+}
+
+.resume-button:hover {
+  background: #ffe4e1;
+  border-color: #ff69b4;
+  color: #c71585;
+}
+
+.resume-button:active {
+  transform: scale(0.98);
+}
+
+.resume-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  max-width: 540px;
+}
